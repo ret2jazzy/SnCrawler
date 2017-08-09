@@ -34,13 +34,19 @@ The main aim for this crawler is to gather as many GET and POST parameters, in a
 
 # Installation
 
-Just clone this repo, and then install the requirements
+Just clone this repo, and then install the requirements(or run the following commands)
 
-`git clone https://github.com/drigg3r/SnCrawler.git`
+```
+git clone https://github.com/drigg3r/SnCrawler.git
 
-`cd SnCrawler/`
+cd SnCrawler/
 
-`pip install -r requirements.txt`
+pip install -r requirements.txt
+```
+
+# Usage
+
+To look at all the option
 
 # TODO
 
