@@ -6,7 +6,7 @@ A simple web crawler, written with bug bounties and pentesting in mind and some 
 
 # Features
 
-Recursively crawls a given website upto specified depth, extracting all the hrefs of the same domain(or subdomains if speified) 
+Recursively crawls a given website upto specified depth, extracting all the hrefs of the same domain(or subdomains if specified) 
 
 Finds all the input and POST forms on the crawled webpages too
 
@@ -28,7 +28,7 @@ For that specific reason, I wrote this crawler which will detect duplicate param
 
 # Aim
 
-The main aim for this crawler is to gather as many GET and POST parameters, in a shortest amount of time. It does this by reducing the amount of URLs it has to visit by only visiting unique parameters,thus reducing the total URL's to crawl exponentially
+The main aim for this crawler is to gather as many GET and POST parameters, in a short amount of time. It does this by reducing the amount of URLs it has to visit by only visiting unique parameters,thus reducing the total URL's to crawl exponentially
 
 ---
 
@@ -107,12 +107,12 @@ Sometimes, there would some URL's you wouldn't want the crawler to visit, like l
 python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of there URLs
 ```
 
-
-
+----
 
 # TODO
 
 Format the output, so that the crawled URL's are displayed beautifully
+Implement multithreading
 
 PS: This is still in beta and I am still testing it, any feedbacks or bugs/issues will be appreciated. It is actually a part of the web fuzzing suite i am currently working on, but i thought to release this crawler as a standalone tool too, as this might be helpfull to a lot of people :)
 For any questions/issues, you can also hit me up on twitter @ret2got
