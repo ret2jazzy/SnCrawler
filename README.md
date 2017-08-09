@@ -82,13 +82,13 @@ required arguments:
 Here is how you can do a simple scaping of a website with the depth 2
 
 ```
-python SnCrawler.py --website "http://domainToCrawl.com" --depth 2
+python SnCrawl.py --website "http://domainToCrawl.com" --depth 2
 ```
 
 You can also specify if you want to include subdomains, by `--subdomains` argument
 
 ```
-python SnCrawler.py -w "http://domainToCrawl.com" --subdomain   #It will also crawl the subdomains now
+python SnCrawl.py -w "http://domainToCrawl.com" --subdomain   #It will also crawl the subdomains now
 ```
 
 By Default, it will display all the scraped URL's and POST parameters on the terminal itself, which can get pretty messy sometimes(especially for larger sites). 
@@ -96,25 +96,25 @@ By Default, it will display all the scraped URL's and POST parameters on the ter
 To cope with that, we have a `-o` option, which will write all the scraped URLs in the specified output file in Json(for easier parsing during later use).
 
 ```
-python SnCrawler.py --website "http://domainToCrawl" -o "/home/user/output.txt"  #Will write all URLs to /home/user/out.txt
+python SnCrawl.py --website "http://domainToCrawl" -o "/home/user/output.txt"  #Will write all URLs to /home/user/out.txt
 ```
 
 For cookies, you can specify the `-c` option. You can directly copy them from burp( or any other intercepting proxy )
 
 ```
-python SnCrawler.py -w "https://domainToCrawl.com" -c "cookie1=val1 ; cookie2=val2"  #Will send all requests with the cookie values
+python SnCrawl.py -w "https://domainToCrawl.com" -c "cookie1=val1 ; cookie2=val2"  #Will send all requests with the cookie values
 ```
 
 Sometimes, there would some URL's you wouldn't want the crawler to visit, like logout pages which might destroy your session. You can specify them with `-e` option. For multiple URLs, you can specify `-e` multiple times
 
 ```
-python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of these URLs
+python SnCrawl.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of these URLs
 ```
 
 You can use the `-v` flag for displaying verbose output of every request being sent and data being parsed
 
 ```
-python SnCrawler.py -w "http://domainToCrawl.com" -v  #will display verbose information about every request being sent
+python SnCrawl.py -w "http://domainToCrawl.com" -v  #will display verbose information about every request being sent
 ```
 
 ----
