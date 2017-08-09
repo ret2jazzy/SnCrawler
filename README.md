@@ -1,6 +1,6 @@
 # SnCrawler
 
-A simple web crawler, written with pentesting in mind and some hacks for smart crawling
+A web crawler written with pentesting in mind and some hacks for smart crawling
 
 -----
 
