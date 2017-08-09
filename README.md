@@ -111,6 +111,9 @@ Sometimes, there would some URL's you wouldn't want the crawler to visit, like l
 python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of these URLs
 ```
 
+You can use the `-v` flag for displaying verbose output of every request being sent and data being parsed
+
+
 
 
 ----
