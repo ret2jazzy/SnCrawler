@@ -116,7 +116,9 @@ python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://
 # TODO
 
 Format the output, so that the crawled URL's are displayed beautifully
+
 Implement multithreading
 
 PS: This is still in beta and I am still testing it, any feedbacks or bugs/issues will be appreciated. It is actually a part of the web fuzzing suite i am currently working on, but i thought to release this crawler as a standalone tool too, as this might be helpfull to a lot of people :)
+
 For any questions/issues, you can also hit me up on twitter @ret2got
