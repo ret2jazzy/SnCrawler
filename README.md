@@ -1,6 +1,6 @@
 # SnCrawler
 
-A simple web crawler, written with bug bounties and pentesting in mind and some hacks for smart crawling
+A simple web crawler, written with pentesting in mind and some hacks for smart crawling
 
 -----
 
@@ -22,7 +22,7 @@ exclude/include subdomains
 
 Of-course there are a lot of other crawlers available on the internet(Burp being the best imo), but they all have the problem of duplicate parameters, which sometimes puts them in a positing of infinite crawling
 
-For eg, All of us bug hunters face URLs like site.com/?id=1, and the ?id parameter can have a huge amount of values, it could go upto ?id=99999 or more. Other crawlers would visit every single of those pages, treating each of them as a unique URL, which sometimes might generate a shitload of traffic, and an infinite crawling(which slows down overall crawling).
+For eg, All of us have to face URLs like site.com/?id=1, and the ?id parameter can have a huge amount of values, it could go upto ?id=99999 or more. Other crawlers would visit every single of those pages, treating each of them as a unique URL, which sometimes might generate a shitload of traffic, and an infinite crawling(which slows down overall crawling).
 
 For that specific reason, I wrote this crawler which will detect duplicate parameters, and only visit a unique parameter once. Thus, it can crawl very large websites in a matter of minutes.
 
