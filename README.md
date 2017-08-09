@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 # Usage
 
-To look at all the available option, you just run the file with `--help`
+To look at all the available options, just run the file with `--help`
 
 ```
 $ python SnCrawl.py --help
@@ -89,13 +89,15 @@ You can also specify if you want to include subdomains, by `--subdomains` argume
 python SnCrawler.py -w "http://domainToCrawl.com" --subdomain   #It will also crawl the subdomains now
 ```
 
-By Default, it will display all the scraped URL's and POST parameters on the terminal itself, which can get pretty messy sometimes(especially for larger sites). But for that, we have a `-o` option, which will write all the scraped URLs in the output file in Json(for easier parsing).
+By Default, it will display all the scraped URL's and POST parameters on the terminal itself, which can get pretty messy sometimes(especially for larger sites). 
+
+To cope with that, we have a `-o` option, which will write all the scraped URLs in the specified output file in Json(for easier parsing during later use).
 
 ```
 python SnCrawler.py --website "http://domainToCrawl" -o "/home/user/output.txt"  #Will write all URLs to /home/user/out.txt
 ```
 
-For cookies, you can specify the `-c` option. You can directly copy them from burp, or any other intercepting proxy
+For cookies, you can specify the `-c` option. You can directly copy them from burp( or any other intercepting proxy )
 
 ```
 python SnCrawler.py -w "https://domainToCrawl.com" -c "cookie1=val1 ; cookie2=val2"  #Will send all requests with the cookie values
@@ -104,7 +106,7 @@ python SnCrawler.py -w "https://domainToCrawl.com" -c "cookie1=val1 ; cookie2=va
 Sometimes, there would some URL's you wouldn't want the crawler to visit, like logout pages which might destroy your session. You can specify them with `-e` option. For multiple URLs, you can specify `-e` multiple times
 
 ```
-python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of there URLs
+python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://domainToCrawl/logout" -e "http://domainToCrawl/destroy"   #It will not send request to both of these URLs
 ```
 
 ----
