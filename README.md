@@ -8,11 +8,13 @@ A simple web crawler, written with bug bounties and pentesting in mind and some 
 
 Recursively crawls a given website upto specified depth, extracting all the hrefs of the same domain(or subdomains if specified) 
 
-Finds all the input and POST forms on the crawled webpages too
+Finds all the input and POST forms on the crawled webpages
 
 Supports cookies
 
 Reduces the total number of requests sent by only crawling an unique parameter once(explained below)
+
+exclude/include subdomains
 
 ----------
 
