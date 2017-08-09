@@ -113,8 +113,9 @@ python SnCrawler.py -w "http://domainToCrawl.com" -c "cookie1=val1;" -e "http://
 
 You can use the `-v` flag for displaying verbose output of every request being sent and data being parsed
 
-
-
+```
+python SnCrawler.py -w "http://domainToCrawl.com" -v  #will display verbose information about every request being sent
+```
 
 ----
 
