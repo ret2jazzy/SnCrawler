@@ -36,7 +36,7 @@ A web crawler written with pentesting in mind and some hacks for smart crawling
 
 # Installation
 
-> Just clone this repo, and then install the requirements(or run the following commands)
+Just clone this repo, and then install the requirements(or run the following commands)
 
 ```
 git clone https://github.com/drigg3r/SnCrawler.git
