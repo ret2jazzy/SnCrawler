@@ -6,21 +6,21 @@ A web crawler written with pentesting in mind and some hacks for smart crawling
 
 # Features
 
-Recursively crawls a given website upto specified depth, extracting all the hrefs of the same domain(or subdomains if specified) 
+> Recursively crawls a given website upto specified depth, extracting all the hrefs of the same domain(or subdomains if specified) 
 
-Finds all the input and POST forms on the crawled webpages
+> Finds all the input and POST forms on the crawled webpages
 
-Supports cookies
+> Supports cookies
 
-Reduces the total number of requests sent by only crawling an unique parameter once(explained below)
+> Reduces the total number of requests sent by only crawling an unique parameter once(explained below)
 
-exclude/include subdomains
+> Ability to exclude/include subdomains
 
 ----------
 
 # Reason
 
-Of-course there are a lot of other crawlers available on the internet(Burp being the best imo), but they all have the problem of duplicate parameters, which sometimes puts them in a positing of infinite crawling
+> Of-course there are a lot of other crawlers available on the internet(Burp being the best imo), but they all have the problem of duplicate parameters, which sometimes puts them in a positing of infinite crawling
 
 For eg, All of us have to face URLs like site.com/?id=1, and the ?id parameter can have a huge amount of values, it could go upto ?id=99999 or more. Other crawlers would visit every single of those pages, treating each of them as a unique URL, which sometimes might generate a shitload of traffic, and an infinite crawling(which slows down overall crawling).
 
