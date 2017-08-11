@@ -110,6 +110,7 @@ def getMainDomain(url): #returning current main domainn only
 	return url.split("/")[2].split(".")[-2]
 
 def expandLink(link, baseDomain, basePath, sslValue): #Expands a href into a full
+	link = link.lstrip()
 	if link.startswith("http://") or link.startswith("https://"):
 		return link
 	if link.startswith("./"):
@@ -146,8 +147,6 @@ def findAHref(parsedHtml, url, subdomains=False):#Find's all the ahrefs in a pag
 			aVal = a.get('href')#Get the href value
 			if notValid(aVal): continue#If not valid, then continue
 			aVal = expandLink(aVal,baseDomain, basePath, sslValue)#Else expand it
-			if "uploads/33b020fae7643b7c350e08f226f59eef_fud" in aVal:
-				print "FOUND %s"%url
 			if subdomains:#If subdomains allowed
 				domain = getMainDomain(aVal)#Get main domain
 				if domain == mainDomain:
