@@ -24,6 +24,7 @@ parser.add_argument("--subdomains", help="To include subdomains", action='store_
 parser.add_argument("-e", "--exclude", help="The url to exclude from being crawled(like logout page)", metavar='"http://domain.com/logout"', action="append")
 parser.add_argument("-v", "--verbose", help="To display verbose output", action='store_true')
 parser.add_argument("-o", "--output", help="The output file where you want to write the scraped URL's(in Json)", metavar="/home/user/saveLocation.txt")
+parser.add_argument("-j", "--js", help="Include the .js files", action='store_true')
 
 args = parser.parse_args()#Just parsing arguments
 
@@ -43,7 +44,7 @@ else: excluded = []
 outFile = args.output
 
 
-get, post = crawler.crawl(s, url,depth=depth, subdomains=args.subdomains, Debug=args.verbose, excluded=excluded)
+get, post, jscript = crawler.crawl(s, url,depth=depth, subdomains=args.subdomains, Debug=args.verbose, excluded=excluded, js=args.js)
 
 print "\n"
 print "Crawler completed"
@@ -60,9 +61,16 @@ for each in post:
 	print "POST Form: %s"%each[0]
 	print "Form Data: %s"%each[1]
 
+print "\n\n"
+print "="*40
+print "JS files"
+for each in jscript:
+	print each
+
 if outFile is not None:
 	f = open(outFile, "w")
 	jsonOut = {"GET": get}
 	jsonOut["POST"] = postForJson(post)
+	jsonOut["JS"] = jscript
 	f.write(json.dumps(jsonOut, indent=4))
 	f.close()
