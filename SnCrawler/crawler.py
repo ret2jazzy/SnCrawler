@@ -245,7 +245,7 @@ def findForms(parsedHtml, url, subdomains=False):#Find's all the forms in a webp
 
 def findAllValues(s,url, subdomains=False, js=False): #Extracting all <a> tags from a response, and parsing them
 	try:
-		parsedHtml = BeautifulSoup(s.get(url, timeout=5).text, "lxml")#Extracting a tags
+		parsedHtml = BeautifulSoup(s.get(url, verify=False, timeout=5).text, "lxml")#Extracting a tags
 	except:
 		return [],[],[]
 	aHrefs = findAHref(parsedHtml, url,subdomains,js)#Get all a hrefs
@@ -264,7 +264,7 @@ def normalizeUrl(url):#Find's if url is accessible with https or not
 
 def isUp(url):#Check if site is up or not
 	try:
-		requests.get(url)
+		requests.get(url, verify=False)
 		return True
 	except:
 		return False
