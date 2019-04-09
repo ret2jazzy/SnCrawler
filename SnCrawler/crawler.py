@@ -247,7 +247,7 @@ def findAllValues(s,url, subdomains=False, js=False): #Extracting all <a> tags f
 	try:
 		parsedHtml = BeautifulSoup(s.get(url, verify=False, timeout=5).text, "lxml")#Extracting a tags
 	except:
-		return [],[],[]
+		return [],[],[],[]
 	aHrefs = findAHref(parsedHtml, url,subdomains,js)#Get all a hrefs
 	postForm,getForm = findForms(parsedHtml, url, subdomains)#Get all POST and GET forms
 	jscripts = findJs(parsedHtml,url, subdomains, js)
