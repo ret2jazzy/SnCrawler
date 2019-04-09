@@ -280,7 +280,7 @@ def crawl(s,baseUrl, depth=3, subdomains=False, Debug=False, excluded=[],js=Fals
 	baseUrl =  normalizeUrl(addSlashAfterDomain(baseUrl.lower()))#A simple bfs type approach
 	if not isUp(baseUrl):
 		print "Unable to crawl %s, site is down"%(baseUrl)
-		return ([],[])
+		return ([],[],[])
 	print "Crawling: %s\n"%(baseUrl)
 	queueU = [baseUrl]#A queue with a type of bf implementation for crawling
 	urlParsedGet = {}#All the unique url's and parameters GET
